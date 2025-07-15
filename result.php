@@ -32,5 +32,5 @@ if (!empty($ip_address)) {
 }
 
 $link_text = "Return to IP address input form";
-echo '<br><button onclick="location.href=\'index.html\'">' . $link_text . '</button>';
+echo '<br><button onclick="location.href=\'index.php\'">' . $link_text . '</button>';
 ?>
