@@ -11,9 +11,7 @@
   <body>
     <h1>Run Network Tools</h1>
     <h2>Apply netstat to the following</h2>
-
-    <!-- Form to input IP address and submit to PHP -->
-    <form method="POST" action="index.php">
+    <form method="POST" action="result.php">
       <label for="ip_address">IP address:</label>
       <input 
         type="text" 
@@ -24,17 +22,10 @@
       />
       <input type="submit" value="View History" />
     </form>
-
     <?php
-    // PHP code to handle form submission and display results
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        // Get the IP address from the form
         $ip_address = htmlspecialchars($_POST['ip_address']);
         echo "<h3>Network activity for IP: $ip_address</h3>";
-
-        // Add logic here to run your network tools and display the results
-        // For example, calling your shell script or other PHP functions
-        // ...
     }
     ?>
   </body>
