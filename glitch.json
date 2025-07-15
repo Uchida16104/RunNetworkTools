@@ -1,0 +1,4 @@
+{
+  "install": "npm install && bash install.sh",
+  "start": "pm2 start index.php --name php-server --watch -- -S 0.0.0.0:8000 && pm2 start index.html --name html-server --watch -- -S 0.0.0.0:8080"
+}

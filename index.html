@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>Run Network Tools</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Run Network Tools</h1>
+    <h2>Apply netstat to the following</h2>
+
+    <!-- Form to input IP address and submit to PHP -->
+    <form method="POST" action="index.php">
+      <label for="ip_address">IP address:</label>
+      <input 
+        type="text" 
+        id="ip_address" 
+        name="ip_address" 
+        placeholder="Example: 172.17.0.81" 
+        required 
+      />
+      <input type="submit" value="View History" />
+    </form>
+
+    <?php
+    // PHP code to handle form submission and display results
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Get the IP address from the form
+        $ip_address = htmlspecialchars($_POST['ip_address']);
+        echo "<h3>Network activity for IP: $ip_address</h3>";
+
+        // Add logic here to run your network tools and display the results
+        // For example, calling your shell script or other PHP functions
+        // ...
+    }
+    ?>
+  </body>
+</html>

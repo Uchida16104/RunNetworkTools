@@ -1,0 +1,14 @@
+{
+  "name": "network-log-project",
+  "version": "1.0.0",
+  "description": "A project to log network activities based on IP",
+  "main": "index.html",
+  "devDependencies": {},
+  "dependencies": {
+    "pm2": "^5.4.3",
+    "express": "^5.0.1"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
